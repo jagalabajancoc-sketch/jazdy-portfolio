@@ -1046,10 +1046,17 @@ body.menu-open .chat-widget {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
+  justify-content: center;   /* ADD THIS */
 }
-@media (min-width: 640px)  { .projects__grid { grid-template-columns: 1fr 1fr; } }
+
+@media (min-width: 640px) {
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; /* ADD THIS */
+  }
+}
 
 .project-card {
   background: var(--bg-raised);
@@ -1848,3 +1855,4 @@ body.menu-open .chat-widget {
   .chat-bubble::before { display: none; }
 
 }
+
