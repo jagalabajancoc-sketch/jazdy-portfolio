@@ -1059,6 +1059,8 @@ body.menu-open .chat-widget {
 }
 
 .project-card {
+  max-width: 600px;
+  margin-inline: auto;
   background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1855,4 +1857,5 @@ body.menu-open .chat-widget {
   .chat-bubble::before { display: none; }
 
 }
+
 
