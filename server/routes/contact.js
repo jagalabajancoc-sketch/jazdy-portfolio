@@ -15,7 +15,7 @@
 
 const express         = require('express');
 const router          = express.Router();
-const Contact = require('../models/contact'); 
+const Contact = require('../models/Contact');  
 const contactLimiter  = require('../middleware/rateLimiter');
 
 /* ─── Shared server-side validation helper ─── */
@@ -108,3 +108,4 @@ router.get('/', (req, res) => {
 
 
 module.exports = router;
+
