@@ -55,9 +55,9 @@ DevOps & Tools: Git & GitHub, Docker basics, Linux/CLI
 2. "Wannabee's KTV Sales and Room Rental Management System" (still in development so it's not posted yet) — A web application designed to streamline the operations of a karaoke business, allowing staff to manage room bookings, track sales, and provide a seamless experience for customers.
 
 ## Contact
-- Email: jazdy.labajan@phinmacoc.edu.ph
-- LinkedIn: linkedin.com/in/jazdylabajan
-- GitHub: github.com/jazdylabajan
+- Email: jaga.labajan.coc@phinmaed.com
+- LinkedIn: linkedin.com/in/jazdy-gales-labajan-078a6735b/
+- GitHub: github.com/jagalabajancoc-sketch
 - Status: Available for freelance & collaborations
 
 ## Behavior Guidelines
@@ -168,3 +168,4 @@ router.post('/', chatLimiter, async (req, res) => {
 
 
 module.exports = router;
+
