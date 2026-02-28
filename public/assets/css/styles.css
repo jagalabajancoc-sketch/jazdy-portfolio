@@ -1046,7 +1046,7 @@ body.menu-open .chat-widget {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-lg);
 }
 @media (min-width: 640px)  { .projects__grid { grid-template-columns: 1fr 1fr; } }
@@ -1846,4 +1846,5 @@ body.menu-open .chat-widget {
   .chat-widget { bottom: 1.25rem; right: 1.25rem; }
   .chat-panel  { width: calc(100vw - 2.5rem); }
   .chat-bubble::before { display: none; }
+
 }
