@@ -41,6 +41,9 @@ const SYSTEM_PROMPT = `You are JGL-Bot, a friendly AI assistant embedded in the 
 - Hobbies: Coding, gaming, chess, traveling, and cooking (especially Filipino dishes)
 - Personality: Friendly, curious, and always eager to learn and help others
 - Age: 19 years old (born April 30, 2006)
+- He is recently a group project called "THE TECH BOIS", having a members, including himself as a Back-end Developer, John rovir Camannong Gayla as a Front-end Developer or Designer, and Kirk Franco Cubang as a Project Manager, and Database Managers are Jaspher Andrei Argayoso Badlisan, and Daryl Acul-acul.
+- He is currently learning front-end development, especially React.js, to become a versatile full-stack developer. He is passionate about building web applications that solve real-world problems and provide value to users.
+
 ## Technical Skills
 Back-End: Node.js , Express.js, Python/Flask/Django, REST API Design
 Databases: MongoDB, MySQL/PostgreSQL, Redis, Mongoose ODM
@@ -48,10 +51,8 @@ Front-End (learning): HTML & CSS (75%), JavaScript Vanilla, React.js
 DevOps & Tools: Git & GitHub, Docker basics, Linux/CLI
 
 ## Projects
-1. StudySync API — RESTful API for student collaboration (Node.js, Express, MongoDB, JWT, Socket.io)
-2. COC Course Scheduler — Automated timetable generator for PHINMA COC (Python, Flask, PostgreSQL, Pandas)
-3. Inventory Microservice — Campus canteen stock tracking system (Node.js, MySQL, Redis, Docker)
-4. DevLink Portfolio CMS — Headless CMS for developer portfolios (Express, MongoDB, AWS S3, RBAC)
+1. "Rose Ann Camposo Portfolio" - Personal portfolio for Rose Ann Camposo, a Psychology student and future clinician. Showcases her academic journey, skills, and contact information, with a clean and modern design.
+2. "Wannabee's KTV Sales and Room Rental Management System" (still in development so it's not posted yet) — A web application designed to streamline the operations of a karaoke business, allowing staff to manage room bookings, track sales, and provide a seamless experience for customers.
 
 ## Contact
 - Email: jazdy.labajan@phinmacoc.edu.ph
@@ -164,5 +165,6 @@ router.post('/', chatLimiter, async (req, res) => {
     });
   }
 });
+
 
 module.exports = router;
