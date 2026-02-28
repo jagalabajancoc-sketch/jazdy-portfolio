@@ -135,7 +135,14 @@
   if (!track) return;
 
   const slides  = Array.from(track.querySelectorAll('.carousel__slide'));
-  const total   = slides.length;
+const total   = slides.length;
+
+// ADD THIS GUARD CLAUSE:
+if (total === 0) {
+  console.warn("Carousel track found, but no slides (.carousel__slide) inside.");
+  return; 
+}
+
   let   current = 0;
   let   autoTimer = null;
   const AUTO_MS = 5000;
@@ -541,5 +548,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       badgeEl.classList.add('visible');
     }
   }, 4000);
+
 
 })();
