@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!--
+  public/index.html — Jazdy Gales Labajan Portfolio
+  ───────────────────────────────────────────────────
+  Asset paths:
+    CSS  → /assets/css/styles.css
+    JS   → /assets/js/script.js
+    Imgs → /assets/images/  (swap placeholders with real files)
+  API   → POST /api/contact  (Express server handles this)
+-->
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jazdy Gales Labajan — Back-End Developer & Future Full-Stack Developer at PHINMA COC" />
+  <title>Jazdy Gales Labajan · Back-End Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@600;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ╔══════════════ NAVIGATION ══════════════╗ -->
+  <header class="site-header" role="banner">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#hero" class="nav__logo" aria-label="Jazdy Gales Labajan home">
+        <span class="logo-bracket">{</span>JGL<span class="logo-bracket">}</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" aria-pressed="true">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+        <button class="nav__burger" id="navBurger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+
+      <!-- Top bar: brand + close -->
+      <div class="mobile-menu__topbar">
+        <span class="mobile-menu__brand">
+          <span class="logo-bracket">{</span>JGL<span class="logo-bracket">}</span>
+        </span>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark/light mode" aria-pressed="true">
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+          </button>
+          <button class="mobile-menu__close" id="menuClose" aria-label="Close navigation menu">✕</button>
+        </div>
+      </div>
+
+      <!-- Nav buttons -->
+      <ul role="list">
+        <li><a href="#about">&nbsp;About</a></li>
+        <li><a href="#education">&nbsp;Education</a></li>
+        <li><a href="#skills">&nbsp;Skills</a></li>
+        <li><a href="#projects">&nbsp;Projects</a></li>
+        <li><a href="#testimonials">&nbsp;Testimonials</a></li>
+        <li><a href="#contact">&nbsp;Contact</a></li>
+      </ul>
+
+      <!-- Bottom strip -->
+      <div class="mobile-menu__bottom">
+        <span class="availability-dot" aria-hidden="true"></span>
+        <span>Available for freelance &amp; collaborations</span>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ╔══════════════ HERO ══════════════╗ -->
+    <section id="hero" class="hero" aria-label="Hero introduction">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="grid-overlay"></div>
+        <div class="glow glow--blue"></div>
+        <div class="glow glow--teal"></div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow" aria-hidden="true"><span class="prompt">&gt;_</span> Hello, world.</p>
+        <h1 class="hero__name">
+          <span class="hero__first">Jazdy Gales</span>
+          <span class="hero__last">Labajan</span>
+        </h1>
+        <p class="hero__title">
+          Back-End Developer
+          <span class="hero__arrow" aria-hidden="true"> → </span>
+          Future Full-Stack Developer
+        </p>
+        <p class="hero__tagline">
+          Hello, my name is Jazdy but you can call me Jaz.<br/>
+          I Build scalable system project, while bridging the gap between logic and experience.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+        </div>
+        <div class="hero__scroll-hint" aria-hidden="true">
+          <span class="scroll-line"></span>
+          <span class="scroll-label">scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ ABOUT ══════════════╗ -->
+    <section id="about" class="section about fade-in" aria-label="About Jazdy">
+      <div class="container about__grid">
+
+        <div class="about__visual" aria-hidden="true">
+          <div class="about__img-frame">
+            <img
+              src="/assets/images/photo-1.png"
+              alt="Jazdy Gales Labajan"
+              width="400" height="480"
+              loading="lazy"
+            />
+            <div class="about__img-deco"></div>
+
+          </div>
+          <div class="about__code-snippet" aria-hidden="true">
+            <pre><code><span class="c-keyword">const</span> jazdy = {
+  <span class="c-prop">school</span>: <span class="c-str">"PHINMA COC"</span>,
+  <span class="c-prop">year</span>: <span class="c-num">2</span>,
+  <span class="c-prop">degree</span>: <span class="c-str">"BSIT"</span>,
+  <span class="c-prop">goal</span>: <span class="c-str">"Full-Stack Dev"</span>
+};</code></pre>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <h2 class="section__title text-center">About <span class="accent">Me</span></h2>
+          <p class="about__bio">
+            I'm a 2nd-year BS Information Technology student at <strong>PHINMA Cagayan de Oro College</strong>,
+            currently focusing my energy on back-end development — writing APIs, managing databases, and
+            architecting systems that scale cleanly.
+          </p>
+          <p class="about__bio">
+            My goal is to grow into a confident full-stack developer who can own a feature end-to-end:
+            from database schema to pixel-perfect UI. Every project I ship is a deliberate step in that direction.
+          </p>
+
+          <div class="about__cards">
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">🎓</span>
+              <div>
+                <strong>Education</strong>
+                <span>BSIT — PHINMA COC, 2nd Year</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">💼</span>
+              <div>
+                <strong>Focus</strong>
+                <span>Back-End Development</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">🎯</span>
+              <div>
+                <strong>Goal</strong>
+                <span>Full-Stack Developer</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span>Cagayan de Oro, PH</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn--primary">Let's Connect</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ EDUCATION ══════════════╗ -->
+    <section id="education" class="section education fade-in" aria-label="Education history">
+      <div class="container">
+        <h2 class="section__title text-center">My <span class="accent">Education</span></h2>
+        <p class="section__sub text-center">The academic journey that shaped who I am as a developer.</p>
+
+        <div class="education__timeline">
+
+          <!-- Entry 1: Elementary -->
+          <div class="edu-entry" data-index="0" aria-label="Elementary education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">🏫</div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2010 – 2016</span>
+              <span class="edu-level">Elementary School</span>
+              <span class="edu-school">West City Central School</span>
+              <span class="edu-location">📍 Vamenta Boulevard, Masterson Ave, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">Elementary</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 2: Junior High -->
+          <div class="edu-entry" data-index="1" aria-label="Junior high school education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">📚</div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2017 – 2020</span>
+              <span class="edu-level">Junior High School</span>
+              <span class="edu-school">Golden Heritage Polytechnic College</span>
+              <span class="edu-location">📍 Zone 4, Vamenta Blvd, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">Junior High</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 3: Senior High -->
+          <div class="edu-entry" data-index="2" aria-label="Senior high school education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">🎒</div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2022 – 2023</span>
+              <span class="edu-level">Senior High School</span>
+              <span class="edu-school">PHINMA Cagayan de Oro College</span>
+              <span class="edu-location">📍 Max Y. Suniel St, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">Senior High</span>
+                <span class="edu-badge">PHINMA COC</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 4: College (current) -->
+          <div class="edu-entry edu-entry--current" data-index="3" aria-label="Current college education">
+            <div class="edu-entry__left">
+              <div class="edu-icon edu-icon--pulse" aria-hidden="true">🎓</div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">
+                2024 – Present
+                <span class="edu-current-badge" aria-label="Currently enrolled">● Current</span>
+              </span>
+              <span class="edu-level">Bachelor of Science in Information Technology (BSIT)</span>
+              <span class="edu-school">PHINMA Cagayan de Oro College</span>
+              <span class="edu-location">📍 Max Y. Suniel St, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">BSIT</span>
+                <span class="edu-badge">2nd Year</span>
+                <span class="edu-badge">PHINMA COC</span>
+                <span class="edu-badge">Back-End Focus</span>
+                <span class="edu-badge">Dean's Lister</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /education__timeline -->
+      </div>
+    </section>
+
+    <!-- ╔══════════════ SKILLS ══════════════╗ -->
+    <section id="skills" class="section skills fade-in" aria-label="Technical skills">
+      <div class="container">
+        <h2 class="section__title text-center">Skills &amp; <span class="accent">Tech Stack</span></h2>
+        <p class="section__sub text-center">Technologies I work with every day, and those I'm actively learning.</p>
+
+        <div class="skills__grid">
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Back-End</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">Node.js</span></li>
+              <li class="skill-item"><span class="skill-badge">Express.js</span></li>
+              <li class="skill-item"><span class="skill-badge">Python</span></li>
+              <li class="skill-item"><span class="skill-badge">REST API Design</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Databases</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">MongoDB</span></li>
+              <li class="skill-item"><span class="skill-badge">MySQL</span></li>
+              <li class="skill-item"><span class="skill-badge">Redis</span></li>
+              <li class="skill-item"><span class="skill-badge">Mongoose ODM</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Front-End (Learning)</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">HTML &amp; CSS</span></li>
+              <li class="skill-item"><span class="skill-badge">JavaScript</span></li>
+              <li class="skill-item"><span class="skill-badge">React.js</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">DevOps &amp; Tools</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">Git &amp; GitHub</span></li>
+              <li class="skill-item"><span class="skill-badge">Docker (Basics)</span></li>
+              <li class="skill-item"><span class="skill-badge">Linux / CLI</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-badges" aria-label="Technology badges">
+          <span class="badge">Node.js</span><span class="badge">Express</span>
+          <span class="badge">MongoDB</span><span class="badge">Python</span>
+          <span class="badge">MySQL</span><span class="badge">Redis</span>
+          <span class="badge">REST API</span><span class="badge">Git</span>
+          <span class="badge">Docker</span><span class="badge">JWT</span>
+          <span class="badge">Postman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ PROJECTS ══════════════╗ -->
+    <section id="projects" class="section projects fade-in" aria-label="Featured projects">
+      <div class="container">
+        <h2 class="section__title text-center">Featured <span class="accent">Projects</span></h2>
+        <p class="section__sub text-center">A selection of back-end and full-stack work — each one a lesson learned.</p>
+
+        <div class="projects__grid">
+
+          <article class="project-card" aria-label="StudySync API">
+            <div class="project-card__img">
+              <img src="https://placehold.co/600x340/1a2332/3498DB?text=StudySync+API"
+                   alt="StudySync API screenshot" width="600" height="340" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--sm btn--primary" aria-label="Live demo — StudySync API">Live Demo</a>
+                <a href="#" class="btn btn--sm btn--ghost" aria-label="GitHub — StudySync API">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">01</span>
+              <h3 class="project-card__title">StudySync API</h3>
+              <p class="project-card__desc">
+                RESTful API for a student collaboration platform. Handles user auth with JWT,
+                group management, task assignment, and real-time notifications via WebSocket.
+              </p>
+              <div class="project-card__tech">
+                <span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span><span>Socket.io</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="COC Course Scheduler">
+            <div class="project-card__img">
+              <img src="https://placehold.co/600x340/1a2332/27AE60?text=Course+Scheduler"
+                   alt="COC Course Scheduler screenshot" width="600" height="340" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--sm btn--primary" aria-label="Live demo — Course Scheduler">Live Demo</a>
+                <a href="#" class="btn btn--sm btn--ghost" aria-label="GitHub — Course Scheduler">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">02</span>
+              <h3 class="project-card__title">COC Course Scheduler</h3>
+              <p class="project-card__desc">
+                Automated course scheduling system for PHINMA COC. Parses faculty availability,
+                room capacity, and subject load to generate conflict-free timetables.
+              </p>
+              <div class="project-card__tech">
+                <span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Pandas</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="Inventory Microservice">
+            <div class="project-card__img">
+              <img src="https://placehold.co/600x340/1a2332/E74C3C?text=Inventory+Service"
+                   alt="Inventory Microservice screenshot" width="600" height="340" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--sm btn--primary" aria-label="Live demo — Inventory Microservice">Live Demo</a>
+                <a href="#" class="btn btn--sm btn--ghost" aria-label="GitHub — Inventory Microservice">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">03</span>
+              <h3 class="project-card__title">Inventory Microservice</h3>
+              <p class="project-card__desc">
+                Lightweight inventory microservice built for a campus canteen. Features
+                stock tracking, low-stock alerts, order history, and CSV export.
+              </p>
+              <div class="project-card__tech">
+                <span>Node.js</span><span>MySQL</span><span>Redis</span><span>Docker</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="DevLink Portfolio CMS">
+            <div class="project-card__img">
+              <img src="https://placehold.co/600x340/1a2332/9B59B6?text=DevLink+CMS"
+                   alt="DevLink Portfolio CMS screenshot" width="600" height="340" loading="lazy" />
+              <div class="project-card__overlay">
+                <a href="#" class="btn btn--sm btn--primary" aria-label="Live demo — DevLink CMS">Live Demo</a>
+                <a href="#" class="btn btn--sm btn--ghost" aria-label="GitHub — DevLink CMS">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">04</span>
+              <h3 class="project-card__title">DevLink Portfolio CMS</h3>
+              <p class="project-card__desc">
+                Headless CMS that lets developers manage portfolio content via a REST API.
+                Supports rich text, media uploads to S3, and role-based access control.
+              </p>
+              <div class="project-card__tech">
+                <span>Express</span><span>MongoDB</span><span>AWS S3</span><span>RBAC</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ TESTIMONIALS ══════════════╗ -->
+    <section id="testimonials" class="section testimonials fade-in" aria-label="Testimonials">
+      <div class="container">
+        <h2 class="section__title text-center">What People <span class="accent">Say</span></h2>
+        <p class="section__sub text-center">Feedback from classmates, mentors, and collaborators.</p>
+
+        <div class="carousel" role="region" aria-label="Testimonials carousel" aria-roledescription="carousel">
+          <div class="carousel__track" id="carouselTrack">
+
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 4">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">
+                  "Jazdy built our group project's entire back-end in two weeks while the rest of us were still designing
+                  the database schema. His code is clean, well-documented, and actually works in production."
+                </p>
+                <footer class="testimonial-card__author">
+                  <img src="https://placehold.co/56x56/2C3E50/ECF0F1?text=AC"
+                       alt="Portrait of Arvin Claros" width="56" height="56" loading="lazy" />
+                  <div>
+                    <cite class="testimonial-card__name">Arvin Claros</cite>
+                    <span class="testimonial-card__role">Classmate & Project Partner, PHINMA COC</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 4">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">
+                  "One of the most driven 2nd-year students I've mentored. Jazdy grasps architectural
+                  concepts quickly and always pushes to understand the 'why' behind every design decision."
+                </p>
+                <footer class="testimonial-card__author">
+                  <img src="https://placehold.co/56x56/2C3E50/ECF0F1?text=Prof"
+                       alt="Portrait of Prof. Maria Santos" width="56" height="56" loading="lazy" />
+                  <div>
+                    <cite class="testimonial-card__name">Prof. Maria Santos</cite>
+                    <span class="testimonial-card__role">IT Faculty, PHINMA COC</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 4">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+                <p class="testimonial-card__text">
+                  "We collaborated on a hackathon project and Jazdy owned the API layer completely.
+                  His Express routes were modular, his error handling was solid — we placed 2nd overall."
+                </p>
+                <footer class="testimonial-card__author">
+                  <img src="https://placehold.co/56x56/2C3E50/ECF0F1?text=KC"
+                       alt="Portrait of Kyra Chua" width="56" height="56" loading="lazy" />
+                  <div>
+                    <cite class="testimonial-card__name">Kyra Chua</cite>
+                    <span class="testimonial-card__role">Fellow Developer, Hackathon Team</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="testimonial-card__text">
+                  "Jazdy helped me debug a tricky Mongoose aggregation pipeline at midnight before our demo.
+                  He didn't just fix it — he explained every step. That's the mark of a real engineer."
+                </p>
+                <footer class="testimonial-card__author">
+                  <img src="https://placehold.co/56x56/2C3E50/ECF0F1?text=RT"
+                       alt="Portrait of Rico Tan" width="56" height="56" loading="lazy" />
+                  <div>
+                    <cite class="testimonial-card__name">Rico Tan</cite>
+                    <span class="testimonial-card__role">Classmate, BSIT 2nd Year</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
+          </div>
+
+          <div class="carousel__controls" aria-label="Carousel controls">
+            <button class="carousel__btn carousel__btn--prev" id="prevSlide" aria-label="Previous testimonial">&#8592;</button>
+            <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Testimonial slides"></div>
+            <button class="carousel__btn carousel__btn--next" id="nextSlide" aria-label="Next testimonial">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ CONTACT ══════════════╗ -->
+    <section id="contact" class="section contact fade-in" aria-label="Contact form">
+      <div class="container contact__grid">
+
+        <div class="contact__info">
+          <h2 class="section__title text-center">Let's <span class="accent">Talk</span></h2>
+          <p>
+            Whether you have a project in mind, want to collaborate, or just want to chat about
+            back-end architecture — my inbox is always open.
+          </p>
+          <ul class="contact__links" role="list">
+            <li>
+              <span aria-hidden="true">✉</span>
+              <a href="mailto:jazdy@example.com">jazdy@example.com</a>
+            </li>
+            <li>
+              <span aria-hidden="true">💼</span>
+              <a href="https://linkedin.com/in/jazdylabajan" target="_blank" rel="noopener noreferrer">linkedin.com/in/jazdylabajan</a>
+            </li>
+            <li>
+              <span aria-hidden="true">🐙</span>
+              <a href="https://github.com/jazdylabajan" target="_blank" rel="noopener noreferrer">github.com/jazdylabajan</a>
+            </li>
+          </ul>
+          <div class="contact__availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span>Available for freelance &amp; collaborations</span>
+          </div>
+        </div>
+
+        <div class="contact__form-wrap">
+          <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="Your full name"
+                       autocomplete="name" required aria-required="true" aria-describedby="nameError" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="contactEmail" name="email" placeholder="you@example.com"
+                       autocomplete="email" required aria-required="true" aria-describedby="emailError" />
+                <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="contactSubject" name="subject" placeholder="What's this about?"
+                     required aria-required="true" aria-describedby="subjectError" />
+              <span class="form-error" id="subjectError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message <span aria-hidden="true">*</span></label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me what's on your mind…"
+                        required aria-required="true" aria-describedby="messageError"></textarea>
+              <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group form-group--rating">
+              <label id="ratingLabel">Rate this experience (optional)</label>
+              <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
+                <input type="radio" name="rating" id="r5" value="5" /><label for="r5" aria-label="5 stars">★</label>
+                <input type="radio" name="rating" id="r4" value="4" /><label for="r4" aria-label="4 stars">★</label>
+                <input type="radio" name="rating" id="r3" value="3" /><label for="r3" aria-label="3 stars">★</label>
+                <input type="radio" name="rating" id="r2" value="2" /><label for="r2" aria-label="2 stars">★</label>
+                <input type="radio" name="rating" id="r1" value="1" /><label for="r1" aria-label="1 star">★</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ╔══════════════ FOOTER ══════════════╗ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__brand">
+        <span class="logo-bracket">{</span>JGL<span class="logo-bracket">}</span>
+        &nbsp;Jazdy Gales Labajan
+      </p>
+      <nav class="footer__nav" aria-label="Footer social links">
+        <a href="mailto:jazdy@example.com" aria-label="Email Jazdy">✉ Email</a>
+        <a href="https://linkedin.com/in/jazdylabajan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">💼 LinkedIn</a>
+        <a href="https://github.com/jazdylabajan" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">🐙 GitHub</a>
+      </nav>
+      <p class="footer__copy">
+        © <span id="footerYear"></span> Jazdy Gales Labajan ·
+        Built with ☕ &amp; Node.js ·
+        <span class="footer__status">
+          <span class="availability-dot"></span> Open to opportunities
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ╔══════════════ AI CHAT WIDGET ══════════════╗ -->
+  <div class="chat-widget" id="chatWidget" aria-label="AI Chat with JGL-Bot">
+
+    <button class="chat-bubble" id="chatBubble" aria-label="Open chat with JGL-Bot" aria-expanded="false" aria-controls="chatPanel">
+      <span class="chat-bubble__icon chat-bubble__icon--open" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </span>
+      <span class="chat-bubble__icon chat-bubble__icon--close" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </span>
+      <span class="chat-bubble__badge" id="chatBadge" aria-label="New message" aria-hidden="true"></span>
+    </button>
+
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with JGL-Bot" aria-hidden="true">
+
+      <div class="chat-panel__header">
+        <div class="chat-panel__avatar" aria-hidden="true">
+          <span class="logo-bracket">{</span>AI<span class="logo-bracket">}</span>
+        </div>
+        <div class="chat-panel__meta">
+          <strong class="chat-panel__name">JGL-Bot</strong>
+          <span class="chat-panel__status">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Ask me about Jazdy
+          </span>
+        </div>
+        <button class="chat-panel__clear" id="chatClear" aria-label="Clear conversation" title="Clear conversation">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-panel__messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+      <div class="chat-typing" id="chatTyping" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="chat-suggestions" id="chatSuggestions" aria-label="Suggested questions">
+        <button class="chat-suggestion">What are Jazdy's top skills?</button>
+        <button class="chat-suggestion">Tell me about his projects</button>
+        <button class="chat-suggestion">Is he available to hire?</button>
+      </div>
+
+      <div class="chat-panel__input-area">
+        <textarea
+          class="chat-input"
+          id="chatInput"
+          placeholder="Ask me about Jazdy…"
+          rows="1"
+          aria-label="Chat message input"
+          maxlength="500"
+        ></textarea>
+        <button class="chat-send" id="chatSend" aria-label="Send message" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
