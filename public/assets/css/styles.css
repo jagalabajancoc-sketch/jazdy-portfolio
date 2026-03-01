@@ -396,6 +396,9 @@ body.menu-open .theme-toggle {
 body.menu-open .chat-widget {
   display: none !important;
 }
+body.menu-open .back-to-top {
+  display: none !important;
+}
 
 /* ═══════════════════════════════════════════
    5b. HERO
@@ -1892,6 +1895,7 @@ body.menu-open .chat-widget {
     height: 40px;
   }
 }
+
 
 
 
