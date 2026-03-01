@@ -396,7 +396,7 @@ body.menu-open .theme-toggle {
 body.menu-open .chat-widget {
   display: none !important;
 }
-body.menu-open .back-to-top {
+body.menu-open #back-to-top {
   display: none !important;
 }
 
@@ -1895,6 +1895,7 @@ body.menu-open .back-to-top {
     height: 40px;
   }
 }
+
 
 
 
