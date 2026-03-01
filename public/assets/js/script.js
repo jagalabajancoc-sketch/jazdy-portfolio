@@ -441,6 +441,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     panel.setAttribute('aria-hidden', 'false');
     bubble.setAttribute('aria-expanded', 'true');
     badgeEl.classList.remove('visible');
+    document.body.classList.add('chat-open');
 
     if (!hasOpened) {
       hasOpened = true;
@@ -454,6 +455,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     widget.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
     bubble.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('chat-open');
   }
 
   bubble.addEventListener('click', () => isOpen ? closeChat() : openChat());
@@ -594,4 +596,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
 
