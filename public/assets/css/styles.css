@@ -372,6 +372,13 @@ body.menu-open .site-header {
   opacity: 1;
 }
 
+.mobile-menu a.active {
+  background: var(--clr-blue-lt);
+  border-color: var(--clr-blue-lt);
+  color: #fff;
+  box-shadow: 0 0 0 1px var(--clr-blue-lt), 0 8px 22px rgba(46,204,113,.28);
+}
+
 .mobile-menu__bottom {
   padding: 1.25rem 1.5rem;
   border-top: 1px solid var(--border);
@@ -1895,6 +1902,7 @@ body.menu-open #backToTopBtn {
     height: 40px;
   }
 }
+
 
 
 
