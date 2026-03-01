@@ -406,6 +406,9 @@ body.menu-open .chat-widget {
 body.menu-open #backToTopBtn {
   display: none !important;
 }
+body.chat-open #backToTopBtn {
+  display: none !important;
+}
 
 /* ═══════════════════════════════════════════
    5b. HERO
@@ -1902,6 +1905,7 @@ body.menu-open #backToTopBtn {
     height: 40px;
   }
 }
+
 
 
 
