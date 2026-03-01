@@ -551,3 +551,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 })();
+
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+// Show/Hide button based on scroll position
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Show button after scrolling down 300px
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+}
+
+// Scroll to top when clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Native smooth scrolling
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    // Show after scrolling 300px
+    if (window.pageYOffset > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  // Use 'pointerdown' or 'click' for better mobile response
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
