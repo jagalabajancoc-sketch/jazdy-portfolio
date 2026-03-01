@@ -410,6 +410,12 @@ body.chat-open #backToTopBtn {
   display: none !important;
 }
 
+@media (max-width: 768px) {
+  body.chat-open #backToTopBtn {
+    display: none !important;
+  }
+}
+
 /* ═══════════════════════════════════════════
    5b. HERO
 ═══════════════════════════════════════════ */
@@ -1905,6 +1911,7 @@ body.chat-open #backToTopBtn {
     height: 40px;
   }
 }
+
 
 
 
