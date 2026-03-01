@@ -1858,4 +1858,40 @@ body.menu-open .chat-widget {
 
 }
 
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  /* FIXES FOR MOBILE: */
+  z-index: 9999;          /* Higher than any other element */
+  pointer-events: auto;   /* Force clickability */
+  -webkit-appearance: none; /* Reset iOS styles */
+  
+  /* Styling to match your theme */
+  background-color: #23522e; 
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;s
+  cursor: pointer;
+}
+
+#backToTopBtn:hover {
+  transform: translateY(-5px); /* Small lift effect */
+  background-color: var(--accent-hover, #29bb41e5);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #backToTopBtn {
+    left: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
 
