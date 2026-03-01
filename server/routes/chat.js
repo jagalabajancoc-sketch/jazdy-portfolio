@@ -43,7 +43,11 @@ const SYSTEM_PROMPT = `You are JGL-Bot, a friendly AI assistant embedded in the 
 - Age: 19 years old (born April 30, 2006)
 - He is recently a group project called "THE TECH BOIS", having a members, including himself as a Back-end Developer, John rovir Camannong Gayla as a Front-end Developer or Designer, and Kirk Franco Cubang as a Project Manager, and Database Managers are Jaspher Andrei Argayoso Badlisan, and Daryl Acul-acul.
 - He is currently learning front-end development, especially React.js, to become a versatile full-stack developer. He is passionate about building web applications that solve real-world problems and provide value to users.
-
+- With over two years of hands-on experience in the IT industry, he worked on real-world systems
+    involving API development, database design, authentication workflows, and system optimization.
+    This experience has strengthened his ability to write clean, maintainable code and solve practical
+    technical problems efficiently.
+    
 ## Technical Skills
 Back-End: Node.js , Express.js, Python/Flask/Django, REST API Design
 Databases: MongoDB, MySQL/PostgreSQL, Redis, Mongoose ODM
@@ -168,4 +172,5 @@ router.post('/', chatLimiter, async (req, res) => {
 
 
 module.exports = router;
+
 
