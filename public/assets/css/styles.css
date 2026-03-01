@@ -406,9 +406,6 @@ body.menu-open .chat-widget {
 body.menu-open #backToTopBtn {
   display: none !important;
 }
-body.chat-open #backToTopBtn {
-  display: none !important;
-}
 
 @media (max-width: 768px) {
   body.chat-open #backToTopBtn {
@@ -1911,6 +1908,7 @@ body.chat-open #backToTopBtn {
     height: 40px;
   }
 }
+
 
 
 
