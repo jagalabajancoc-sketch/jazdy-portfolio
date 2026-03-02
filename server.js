@@ -36,10 +36,29 @@ const PORT = parseInt(process.env.PORT, 10) || 3000;
 /* ══════════════════════════════════════════
    SECURITY MIDDLEWARE
 ══════════════════════════════════════════ */
-app.use(helmet({ contentSecurityPolicy: false }));
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc:  ["'self'"],
+      styleSrc:   ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc:    ["'self'", "https://fonts.gstatic.com"],
+      imgSrc:     ["'self'", "data:"],
+      connectSrc: ["'self'", "https://api.groq.com"],
+    },
+  },
+}));
+
+if (!process.env.GROQ_API_KEY) {
+  console.warn('⚠️  WARNING: GROQ_API_KEY is not set. AI chat will be unavailable.');
+}
+
+if (!process.env.ALLOWED_ORIGIN) {
+  console.warn('⚠️  WARNING: ALLOWED_ORIGIN is not set. Cross-origin requests will be blocked.');
+}
 
 app.use(cors({
-  origin:  process.env.ALLOWED_ORIGIN || '*',
+  origin:  process.env.ALLOWED_ORIGIN,
   methods: ['GET', 'POST'],
 }));
 

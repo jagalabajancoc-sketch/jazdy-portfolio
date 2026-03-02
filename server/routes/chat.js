@@ -79,7 +79,7 @@ function validateMessages(messages) {
   if (!Array.isArray(messages) || messages.length === 0) {
     return 'Messages must be a non-empty array.';
   }
-  if (messages.length > 40) {
+  if (messages.length > 20) {
     return 'Conversation is too long. Please start a new chat.';
   }
   for (const msg of messages) {
@@ -89,8 +89,8 @@ function validateMessages(messages) {
     if (typeof msg.content !== 'string' || msg.content.trim().length === 0) {
       return 'Each message must have non-empty string content.';
     }
-    if (msg.content.length > 2000) {
-      return 'Individual messages may not exceed 2000 characters.';
+    if (msg.content.length > 500) {
+      return 'Individual messages may not exceed 500 characters.';
     }
   }
   return null;
@@ -115,7 +115,7 @@ router.post('/', chatLimiter, async (req, res) => {
   /* Validate messages */
   const validationError = validateMessages(messages);
   if (validationError) {
-    return res.status(422).json({ success: false, message: validationError });
+    return res.status(400).json({ success: false, message: validationError });
   }
 
   try {
