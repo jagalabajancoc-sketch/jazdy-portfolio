@@ -103,6 +103,7 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  overflow-y: auto;
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 
@@ -1926,6 +1927,7 @@ body.menu-open #backToTopBtn {
     height: 40px;
   }
 }
+
 
 
 
