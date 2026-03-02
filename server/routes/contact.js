@@ -15,6 +15,7 @@
 
 const express         = require('express');
 const router          = express.Router();
+const crypto          = require('crypto');
 const Contact = require('../models/Contact');  
 const contactLimiter  = require('../middleware/rateLimiter');
 
@@ -68,7 +69,7 @@ router.post('/', contactLimiter, async (req, res) => {
       subject: String(subject).trim(),
       message: String(message).trim(),
       rating:  parsedRating,
-      ip:      req.headers['x-forwarded-for']?.split(',')[0] || req.ip,
+      ip:      crypto.createHmac('sha256', process.env.IP_HASH_SALT || 'default-ip-salt').update(req.headers['x-forwarded-for']?.split(',')[0] || req.ip || '').digest('hex'),
     });
 
     /* 4 — Success response */
