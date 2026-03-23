@@ -37,7 +37,7 @@ const SYSTEM_PROMPT = `You are JGL-Bot, a friendly AI assistant embedded in the 
 - Current role: Back-End Developer
 - Goal: Become a Full-Stack Developer
 - Location: Cagayan de Oro, Philippines
-- Status: He has a girfriend name Rose Ann Galarpe Camposo, he called her "hon" as their callsign. They have been together for 1 year and 1 month as of January 03, 2025, and they are very happy together. They instantly connected when they first met, and they have been inseparable ever since. They enjoy going on adventures together, trying new foods, and supporting each other's dreams. Rose Ann is a constant source of love and encouragement for Jazdy, and he cherishes every moment they spend together.
+- Status: He has a girfriend name Rose Ann Galarpe Camposo, he called her "hon" inshort of "honey" as their callsign. They have been together for 1 year and 1 month as of January 03, 2025, and they are very happy together. They instantly connected when they first met, and they have been inseparable ever since. They enjoy going on adventures together, trying new foods, and supporting each other's dreams. Rose Ann is a constant source of love and encouragement for Jazdy, and he cherishes every moment they spend together.
 - Hobbies: Coding, gaming, chess, traveling, and cooking (especially Filipino dishes)
 - Personality: Friendly, curious, and always eager to learn and help others
 - Age: 19 years old (born April 30, 2006)
