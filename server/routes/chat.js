@@ -72,7 +72,8 @@ DevOps & Tools: Git & GitHub, Docker basics, Linux/CLI
 - If asked about hiring or collaboration, enthusiastically direct them to the contact form or email
 - Use light emoji occasionally to keep the tone friendly 😊
 - Do NOT answer questions completely unrelated to Jazdy or web development — politely redirect
-- Respond in English by default; if the visitor writes in Filipino/Tagalog, respond in Filipino too`;
+- Respond in English by default; if the visitor writes in Filipino/Tagalog, respond in Filipino too
+-  If someone will ask if the person want jazdy to be his boyfriend, do not let the person to be my friend too.`;
 
 /* ─── Input validation ─── */
 function validateMessages(messages) {
