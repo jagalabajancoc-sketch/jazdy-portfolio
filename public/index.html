@@ -16,8 +16,8 @@
   <title>Jazdy Gales Labajan · Back-End Developer</title>
   
   <!-- Favicon -->
-<link rel="icon" type="image/png" href="/assets/images/icon.png" />
-<link rel="apple-touch-icon" href="/assets/images/icon.png" />
+  <link rel="icon" type="image/png" href="/assets/images/icon.png" />
+  <link rel="apple-touch-icon" href="/assets/images/icon.png" />
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,7 @@
 </head>
 <body>
   
-    <button id="backToTopBtn" title="Go to top" aria-label="Back to top">↑</button>
+  <button id="backToTopBtn" title="Go to top" aria-label="Back to top">↑</button>
 
   <!-- ╔══════════════ NAVIGATION ══════════════╗ -->
   <header class="site-header" role="banner">
@@ -68,11 +68,11 @@
           <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle dark/light mode" aria-pressed="true">
             <span class="theme-toggle__icon" aria-hidden="true"></span>
           </button>
-          <button class="mobile-menu__close" id="menuClose" aria-label="Close navigation menu">✕</button>
+          <button class="mobile-menu__close" id="menuClose" aria-label="Close navigation menu">&#x2715;</button>
         </div>
       </div>
 
-      <!-- Nav buttons -->
+      <!-- Nav links -->
       <ul role="list">
         <li><a href="#about">&nbsp;About</a></li>
         <li><a href="#education">&nbsp;Education</a></li>
@@ -109,12 +109,12 @@
         </h1>
         <p class="hero__title">
           Back-End Developer
-          <span class="hero__arrow" aria-hidden="true"> → </span>
+          <span class="hero__arrow" aria-hidden="true"> &rarr; </span>
           Future Full-Stack Developer
         </p>
         <p class="hero__tagline">
           Hello, my name is Jazdy but you can call me Jaz.<br/>
-          I build scalable system project, while bridging the gap between logic and experience.
+          I build scalable system projects, while bridging the gap between logic and experience.
         </p>
         <div class="hero__cta">
           <a href="#projects" class="btn btn--primary">View My Work</a>
@@ -140,7 +140,6 @@
               loading="lazy"
             />
             <div class="about__img-deco"></div>
-
           </div>
           <div class="about__code-snippet" aria-hidden="true">
             <pre><code><span class="c-keyword">const</span> jazdy = {
@@ -153,13 +152,13 @@
         </div>
 
         <div class="about__text">
-  <h2 class="section__title text-center">About <span class="accent">Me</span></h2>
+          <h2 class="section__title text-center">About <span class="accent">Me</span></h2>
 
-  <p class="about__bio"> 
-    I'm a BS Information Technology student at <strong>PHINMA Cagayan de Oro College</strong>, currently focusing my energy on back-end development — writing APIs, managing databases, and architecting systems that scale cleanly.
-  </p> 
-          <p class="about__bio"> 
-            With over 4 years of hands-on experience in the IT industry, I’ve worked on real-world systems involving API development, database design, authentication workflows, and system optimization. This experience has strengthened my ability to write clean, maintainable code and solve practical technical problems efficiently. 
+          <p class="about__bio">
+            I'm a BS Information Technology student at <strong>PHINMA Cagayan de Oro College</strong>, currently focusing my energy on back-end development — writing APIs, managing databases, and architecting systems that scale cleanly.
+          </p>
+          <p class="about__bio">
+            With over 4 years of hands-on experience in the IT industry, I've worked on real-world systems involving API development, database design, authentication workflows, and system optimization. This experience has strengthened my ability to write clean, maintainable code and solve practical technical problems efficiently.
           </p>
 
           <div class="about__cards">
@@ -209,16 +208,18 @@
           <!-- Entry 4: College (current) -->
           <div class="edu-entry edu-entry--current" data-index="3" aria-label="Current college education">
             <div class="edu-entry__left">
-              <div class="edu-icon edu-icon--pulse" aria-hidden="true">🎓</div>
+              <div class="edu-icon edu-icon--pulse" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
             </div>
             <div class="edu-entry__right">
               <span class="edu-years">
                 2024 – Present
-                <span class="edu-current-badge" aria-label="Currently enrolled">● Current</span>
+                <span class="edu-current-badge" aria-label="Currently enrolled">&#9679; Current</span>
               </span>
               <span class="edu-level">Bachelor of Science in Information Technology (BSIT)</span>
               <span class="edu-school">PHINMA Cagayan de Oro College</span>
-              <span class="edu-location">📍 Max Y. Suniel St, Cagayan de Oro</span>
+              <span class="edu-location">Max Y. Suniel St, Cagayan de Oro</span>
               <div class="edu-badge-row">
                 <span class="edu-badge">BSIT</span>
                 <span class="edu-badge">College</span>
@@ -228,24 +229,22 @@
             </div>
           </div>
 
-          
-
           <!-- Entry 3: Senior High -->
           <div class="edu-entry" data-index="2" aria-label="Senior high school education">
             <div class="edu-entry__left">
-              <div class="edu-icon" aria-hidden="true">🎒</div>
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              </div>
             </div>
             <div class="edu-entry__right">
               <span class="edu-years">2022 – 2023</span>
               <span class="edu-level">Senior High School</span>
               <span class="edu-school">PHINMA Cagayan de Oro College</span>
-              <span class="edu-location">📍 Max Y. Suniel St, Cagayan de Oro</span>
+              <span class="edu-location">Max Y. Suniel St, Cagayan de Oro</span>
               <div class="edu-badge-row">
-                <span class="edu-badge">TVL - PROGRAMMING TRACK</span>
-                <span class="edu-badge">Learned Basic Fundamentals</span>
+                <span class="edu-badge">TVL - Programming Track</span>
+                <span class="edu-badge">Basic Fundamentals</span>
                 <span class="edu-badge">Leadership</span>
-                
-                
               </div>
             </div>
           </div>
@@ -253,13 +252,15 @@
           <!-- Entry 2: Junior High -->
           <div class="edu-entry" data-index="1" aria-label="Junior high school education">
             <div class="edu-entry__left">
-              <div class="edu-icon" aria-hidden="true">📚</div>
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
             </div>
             <div class="edu-entry__right">
               <span class="edu-years">2017 – 2020</span>
               <span class="edu-level">Junior High School</span>
               <span class="edu-school">Golden Heritage Polytechnic College</span>
-              <span class="edu-location">📍 Zone 4, Vamenta Blvd, Cagayan de Oro</span>
+              <span class="edu-location">Zone 4, Vamenta Blvd, Cagayan de Oro</span>
               <div class="edu-badge-row">
                 <span class="edu-badge">Active Learner</span>
               </div>
@@ -269,13 +270,15 @@
           <!-- Entry 1: Elementary -->
           <div class="edu-entry" data-index="0" aria-label="Elementary education">
             <div class="edu-entry__left">
-              <div class="edu-icon" aria-hidden="true">🏫</div>
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
             </div>
             <div class="edu-entry__right">
               <span class="edu-years">2010 – 2016</span>
               <span class="edu-level">Elementary School</span>
               <span class="edu-school">West City Central School</span>
-              <span class="edu-location">📍 Vamenta Boulevard, Masterson Ave, Cagayan de Oro</span>
+              <span class="edu-location">Vamenta Boulevard, Masterson Ave, Cagayan de Oro</span>
               <div class="edu-badge-row">
                 <span class="edu-badge">Active Member</span>
               </div>
@@ -353,7 +356,7 @@
 
           <article class="project-card" aria-label="Rose Ann Camposo Portfolio">
             <div class="project-card__img">
-              <img src="/assets/images/ss_web-1.png" />
+              <img src="/assets/images/ss_web-1.png" alt="Rose Ann Camposo Portfolio screenshot" />
               <div class="project-card__overlay">
                 <a href="https://roseann-portfolio.vercel.app/index.html" class="btn btn--sm btn--primary" target="_blank" rel="noopener" aria-label="Live demo — Rose Ann Camposo Portfolio">Live Demo</a>
                 <a href="https://github.com/jagalabajancoc-sketch/roseann-portfolio" class="btn btn--sm btn--ghost" target="_blank" rel="noopener" aria-label="GitHub — Rose Ann Camposo Portfolio">GitHub</a>
@@ -373,24 +376,24 @@
 
           <article class="project-card" aria-label="Wannabees KTV Website">
             <div class="project-card__img project-card__img--merge">
-              <div class="merged-shot-grid" aria-label="Rose Ann Camposo Portfolio image collage">
-                <img src="/assets/images/ss_web-2-1.png" alt="Rose Ann Camposo Portfolio home page" width="820" height="680" loading="lazy" />
-                <img src="/assets/images/ss_web-2-2.png" alt="Rose Ann Camposo Portfolio about section" width="420" height="330" loading="lazy" />
-                <img src="/assets/images/ss_web-2-3.png" alt="Rose Ann Camposo Portfolio contact section" width="420" height="330" loading="lazy" />
+              <div class="merged-shot-grid" aria-label="Wannabees KTV image collage">
+                <img src="/assets/images/ss_web-2-1.png" alt="Wannabees KTV main page" width="820" height="680" loading="lazy" />
+                <img src="/assets/images/ss_web-2-2.png" alt="Wannabees KTV sales view" width="420" height="330" loading="lazy" />
+                <img src="/assets/images/ss_web-2-3.png" alt="Wannabees KTV inventory view" width="420" height="330" loading="lazy" />
               </div>
               <div class="project-card__overlay">
-                <a href="public/index.html" class="btn btn--sm btn--primary" target="_blank" rel="noopener" aria-label="Live demo — Rose Ann Camposo Portfolio">Live Demo (IN DEVELOPMENT)</a>
-                <a href="public/index.html" class="btn btn--sm btn--ghost" target="_blank" rel="noopener" aria-label="GitHub — Rose Ann Camposo Portfolio">GitHub (NOT AVAILABLE)</a>
+                <a href="public/index.html" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Live Demo (In Development)</a>
+                <a href="public/index.html" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub (Not Available)</a>
               </div>
             </div>
             <div class="project-card__body">
               <span class="project-card__number" aria-hidden="true">02</span>
-              <h3 class="project-card__title">Wannabees KTV Sales and Inventory w/ Customer Handling Management</h3>
+              <h3 class="project-card__title">Wannabees KTV — Sales, Inventory &amp; Customer Management</h3>
               <p class="project-card__desc">
-                A live web project for Wannabees KTV, published online for public access and showcasing the core pages and user flow. (Only the Owner or the Staff can access by using verified email account).
+                A live web project for Wannabees KTV, published online for public access and showcasing the core pages and user flow. Access is restricted to verified owner and staff accounts.
               </p>
               <div class="project-card__tech">
-                <span>PHP pages</span><span>PHP API endpoints</span><span>SQL</span>
+                <span>PHP</span><span>PHP API</span><span>SQL</span>
               </div>
             </div>
           </article>
@@ -406,23 +409,22 @@
         <p class="section__sub text-center">Feedback from classmates, mentors, and collaborators.</p>
 
         <div class="carousel__controls" aria-label="Carousel controls">
-            <button class="carousel__btn carousel__btn--prev" id="prevSlide" aria-label="Previous testimonial">&#8592;</button>
-            <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Testimonial slides"></div>
-            <button class="carousel__btn carousel__btn--next" id="nextSlide" aria-label="Next testimonial">&#8594;</button>
-          </div>
+          <button class="carousel__btn carousel__btn--prev" id="prevSlide" aria-label="Previous testimonial">&#8592;</button>
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Testimonial slides"></div>
+          <button class="carousel__btn carousel__btn--next" id="nextSlide" aria-label="Next testimonial">&#8594;</button>
         </div>
 
         <br>
-        
+
         <div class="carousel" role="region" aria-label="Testimonials carousel" aria-roledescription="carousel">
           <div class="carousel__track" id="carouselTrack">
 
-            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 4 of 4">
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 1">
               <blockquote class="testimonial-card">
-                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="testimonial-card__text">
-                  "I am writing this testimony to express my appreciation for the excellent service I received. As one of his clients, I was highly impressed with his organized system and professional approach throughout the entire process. 
-He demonstrated remarkable flexibility, especially when it came to design preferences. He was open to suggestions, attentive to details, and willing to make necessary adjustments to ensure that the final output aligned with my vision. 
+                  "I am writing this testimony to express my appreciation for the excellent service I received. As one of his clients, I was highly impressed with his organized system and professional approach throughout the entire process.
+He demonstrated remarkable flexibility, especially when it came to design preferences. He was open to suggestions, attentive to details, and willing to make necessary adjustments to ensure that the final output aligned with my vision.
 What stood out the most was his commitment to delivering quality work. Not only did he accomplish what I initially requested, but he also exceeded my expectations through creativity, precision, and dedication. I highly recommend his services to anyone seeking professionalism, adaptability, and outstanding results."
                 </p>
                 <footer class="testimonial-card__author">
@@ -435,6 +437,10 @@ What stood out the most was his commitment to delivering quality work. Not only 
                 </footer>
               </blockquote>
             </div>
+
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ╔══════════════ CONTACT ══════════════╗ -->
@@ -449,15 +455,21 @@ What stood out the most was his commitment to delivering quality work. Not only 
           </p>
           <ul class="contact__links" role="list">
             <li>
-              <span aria-hidden="true"> ✉</span>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
               <a href="mailto:jaga.labajan.coc@phinmaed.com">jaga.labajan.coc@phinmaed.com</a>
             </li>
             <li>
-              <span aria-hidden="true">💼</span>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
               <a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jazdylabajan</a>
             </li>
             <li>
-              <span aria-hidden="true">🐙</span>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </span>
               <a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer">github.com/jagalabajancoc-sketch</a>
             </li>
           </ul>
@@ -501,11 +513,11 @@ What stood out the most was his commitment to delivering quality work. Not only 
             <div class="form-group form-group--rating">
               <label id="ratingLabel">Rate this experience (optional)</label>
               <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
-                <input type="radio" name="rating" id="r5" value="5" /><label for="r5" aria-label="5 stars">★</label>
-                <input type="radio" name="rating" id="r4" value="4" /><label for="r4" aria-label="4 stars">★</label>
-                <input type="radio" name="rating" id="r3" value="3" /><label for="r3" aria-label="3 stars">★</label>
-                <input type="radio" name="rating" id="r2" value="2" /><label for="r2" aria-label="2 stars">★</label>
-                <input type="radio" name="rating" id="r1" value="1" /><label for="r1" aria-label="1 star">★</label>
+                <input type="radio" name="rating" id="r5" value="5" /><label for="r5" aria-label="5 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r4" value="4" /><label for="r4" aria-label="4 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r3" value="3" /><label for="r3" aria-label="3 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r2" value="2" /><label for="r2" aria-label="2 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r1" value="1" /><label for="r1" aria-label="1 star">&#9733;</label>
               </div>
             </div>
 
@@ -529,12 +541,12 @@ What stood out the most was his commitment to delivering quality work. Not only 
         &nbsp;Jazdy Gales Labajan
       </p>
       <nav class="footer__nav" aria-label="Footer social links">
-        <a href="mailto:jaga.labajan.coc@phinmaed.com" aria-label="Email Jazdy">✉ Email</a>
-        <a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">💼 LinkedIn</a>
-        <a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">🐙 GitHub</a>
+        <a href="mailto:jaga.labajan.coc@phinmaed.com" aria-label="Email Jazdy">Email</a>
+        <a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+        <a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
       </nav>
       <p class="footer__copy">
-        © <span id="footerYear"></span> Jazdy Gales Labajan ·
+        &copy; <span id="footerYear"></span> Jazdy Gales Labajan &middot;
         <span class="footer__status">
           <span class="availability-dot"></span> Open to opportunities
         </span>
@@ -620,38 +632,4 @@ What stood out the most was his commitment to delivering quality work. Not only 
 
   <script src="/assets/js/script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
