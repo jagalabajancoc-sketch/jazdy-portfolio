@@ -482,8 +482,20 @@ What stood out the most was his commitment to delivering quality work. Not only 
           <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
             <div class="form-row">
               <div class="form-group">
-                <label for="contactName">Full Name <span aria-hidden="true">*</span></label>
-                <input type="text" id="contactName" name="name" placeholder="Your full name"
+                <label for="contactName">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="Your first name"
+                       autocomplete="name" required aria-required="true" aria-describedby="nameError" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactName">Middle Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="Your first name"
+                       autocomplete="name" required aria-required="true" aria-describedby="nameError" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactName">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="Your first name"
                        autocomplete="name" required aria-required="true" aria-describedby="nameError" />
                 <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
               </div>
