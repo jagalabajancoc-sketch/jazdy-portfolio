@@ -58,6 +58,8 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+
+      <!-- Top bar: brand + close -->
       <div class="mobile-menu__topbar">
         <span class="mobile-menu__brand">
           <span class="logo-bracket">{</span>JGL<span class="logo-bracket">}</span>
@@ -70,6 +72,7 @@
         </div>
       </div>
 
+      <!-- Nav links -->
       <ul role="list">
         <li><a href="#about">&nbsp;About</a></li>
         <li><a href="#education">&nbsp;Education</a></li>
@@ -79,14 +82,18 @@
         <li><a href="#contact">&nbsp;Contact</a></li>
       </ul>
 
+      <!-- Bottom strip -->
       <div class="mobile-menu__bottom">
         <span class="availability-dot" aria-hidden="true"></span>
         <span>Available for freelance &amp; collaborations</span>
       </div>
+
     </div>
   </header>
 
   <main id="main-content">
+
+    <!-- ╔══════════════ HERO ══════════════╗ -->
     <section id="hero" class="hero" aria-label="Hero introduction">
       <div class="hero__bg" aria-hidden="true">
         <div class="grid-overlay"></div>
@@ -120,11 +127,18 @@
       </div>
     </section>
 
+    <!-- ╔══════════════ ABOUT ══════════════╗ -->
     <section id="about" class="section about fade-in" aria-label="About Jazdy">
       <div class="container about__grid">
+
         <div class="about__visual" aria-hidden="true">
           <div class="about__img-frame">
-            <img src="/assets/images/photo-1.png" alt="Jazdy Gales Labajan" width="400" height="480" loading="lazy" />
+            <img
+              src="/assets/images/photo-1.png"
+              alt="Jazdy Gales Labajan"
+              width="400" height="480"
+              loading="lazy"
+            />
             <div class="about__img-deco"></div>
           </div>
           <div class="about__code-snippet" aria-hidden="true">
@@ -139,12 +153,14 @@
 
         <div class="about__text">
           <h2 class="section__title text-center">About <span class="accent">Me</span></h2>
+
           <p class="about__bio">
-            I'm a BS Information Technology student at <strong>PHINMA Cagayan de Oro College</strong>, currently focusing my energy on back-end development — writing APIs, managing databases, and ar[...]
+            I'm a BS Information Technology student at <strong>PHINMA Cagayan de Oro College</strong>, currently focusing my energy on back-end development — writing APIs, managing databases, and architecting systems that scale cleanly.
           </p>
           <p class="about__bio">
-            With over 4 years of hands-on experience in the IT industry, I've worked on real-world systems involving API development, database design, authentication workflows, and system optimization[...]
+            With over 4 years of hands-on experience in the IT industry, I've worked on real-world systems involving API development, database design, authentication workflows, and system optimization. This experience has strengthened my ability to write clean, maintainable code and solve practical technical problems efficiently.
           </p>
+
           <div class="about__cards">
             <div class="info-card">
               <span class="info-card__icon" aria-hidden="true"></span>
@@ -175,42 +191,444 @@
               </div>
             </div>
           </div>
+
           <a href="#contact" class="btn btn--primary">Let's Connect</a>
         </div>
       </div>
     </section>
 
+    <!-- ╔══════════════ EDUCATION ══════════════╗ -->
     <section id="education" class="section education fade-in" aria-label="Education history">
       <div class="container">
         <h2 class="section__title text-center">My <span class="accent">Education</span></h2>
         <p class="section__sub text-center">The academic journey that shaped who I am as a developer.</p>
+
         <div class="education__timeline">
+
+          <!-- Entry 4: College (current) -->
           <div class="edu-entry edu-entry--current" data-index="3" aria-label="Current college education">
-            <div class="edu-entry__left"><div class="edu-icon edu-icon--pulse" aria-hidden="true"></div></div>
+            <div class="edu-entry__left">
+              <div class="edu-icon edu-icon--pulse" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+            </div>
             <div class="edu-entry__right">
-              <span class="edu-years">2024 – Present <span class="edu-current-badge" aria-label="Currently enrolled">&#9679; Current</span></span>
+              <span class="edu-years">
+                2024 – Present
+                <span class="edu-current-badge" aria-label="Currently enrolled">&#9679; Current</span>
+              </span>
               <span class="edu-level">Bachelor of Science in Information Technology (BSIT)</span>
               <span class="edu-school">PHINMA Cagayan de Oro College</span>
               <span class="edu-location">Max Y. Suniel St, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">BSIT</span>
+                <span class="edu-badge">College</span>
+                <span class="edu-badge">Back-End Focus</span>
+                <span class="edu-badge">Dean's Lister</span>
+              </div>
             </div>
+          </div>
+
+          <!-- Entry 3: Senior High -->
+          <div class="edu-entry" data-index="2" aria-label="Senior high school education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2022 – 2023</span>
+              <span class="edu-level">Senior High School</span>
+              <span class="edu-school">PHINMA Cagayan de Oro College</span>
+              <span class="edu-location">Max Y. Suniel St, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">TVL - Programming Track</span>
+                <span class="edu-badge">Basic Fundamentals</span>
+                <span class="edu-badge">Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 2: Junior High -->
+          <div class="edu-entry" data-index="1" aria-label="Junior high school education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2017 – 2020</span>
+              <span class="edu-level">Junior High School</span>
+              <span class="edu-school">Golden Heritage Polytechnic College</span>
+              <span class="edu-location">Zone 4, Vamenta Blvd, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">Active Learner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 1: Elementary -->
+          <div class="edu-entry" data-index="0" aria-label="Elementary education">
+            <div class="edu-entry__left">
+              <div class="edu-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+            </div>
+            <div class="edu-entry__right">
+              <span class="edu-years">2010 – 2016</span>
+              <span class="edu-level">Elementary School</span>
+              <span class="edu-school">West City Central School</span>
+              <span class="edu-location">Vamenta Boulevard, Masterson Ave, Cagayan de Oro</span>
+              <div class="edu-badge-row">
+                <span class="edu-badge">Active Member</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /education__timeline -->
+      </div>
+    </section>
+
+    <!-- ╔══════════════ SKILLS ══════════════╗ -->
+    <section id="skills" class="section skills fade-in" aria-label="Technical skills">
+      <div class="container">
+        <h2 class="section__title text-center">Skills &amp; <span class="accent">Tech Stack</span></h2>
+        <p class="section__sub text-center">Technologies I work with every day, and those I'm actively learning.</p>
+
+        <div class="skills__grid">
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Back-End</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">Node.js</span></li>
+              <li class="skill-item"><span class="skill-badge">Express.js</span></li>
+              <li class="skill-item"><span class="skill-badge">Python</span></li>
+              <li class="skill-item"><span class="skill-badge">REST API</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Databases</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">MongoDB</span></li>
+              <li class="skill-item"><span class="skill-badge">MySQL</span></li>
+              <li class="skill-item"><span class="skill-badge">Redis</span></li>
+              <li class="skill-item"><span class="skill-badge">Mongoose ODM</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">Front-End</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">HTML &amp; CSS</span></li>
+              <li class="skill-item"><span class="skill-badge">JavaScript</span></li>
+              <li class="skill-item"><span class="skill-badge">React.js</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__heading">DevOps &amp; Tools</h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item"><span class="skill-badge">Git &amp; GitHub</span></li>
+              <li class="skill-item"><span class="skill-badge">Docker (Basics)</span></li>
+              <li class="skill-item"><span class="skill-badge">Linux / CLI</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-badges" aria-label="Technology badges">
+          <span class="badge">Node.js</span><span class="badge">Express</span>
+          <span class="badge">MongoDB</span><span class="badge">Python</span>
+          <span class="badge">MySQL</span><span class="badge">Redis</span>
+          <span class="badge">REST API</span><span class="badge">Git</span>
+          <span class="badge">Docker</span><span class="badge">JWT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ PROJECTS ══════════════╗ -->
+    <section id="projects" class="section projects fade-in" aria-label="Featured projects">
+      <div class="container">
+        <h2 class="section__title text-center">Featured <span class="accent">Projects</span></h2>
+        <p class="section__sub text-center">A selection of back-end and full-stack work — each one a lesson learned.</p>
+
+        <div class="projects__grid">
+
+          <article class="project-card" aria-label="Rose Ann Camposo Portfolio">
+            <div class="project-card__img">
+              <img src="/assets/images/ss_web-1.png" alt="Rose Ann Camposo Portfolio screenshot" />
+              <div class="project-card__overlay">
+                <a href="https://roseann-portfolio.vercel.app/index.html" class="btn btn--sm btn--primary" target="_blank" rel="noopener" aria-label="Live demo — Rose Ann Camposo Portfolio">Live Demo</a>
+                <a href="https://github.com/jagalabajancoc-sketch/roseann-portfolio" class="btn btn--sm btn--ghost" target="_blank" rel="noopener" aria-label="GitHub — Rose Ann Camposo Portfolio">GitHub</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">01</span>
+              <h3 class="project-card__title">Rose Ann Camposo Portfolio</h3>
+              <p class="project-card__desc">
+                Personal portfolio for Rose Ann Camposo, a Psychology student and future clinician. Showcases her academic journey, skills, and contact information, with a clean and modern design.
+              </p>
+              <div class="project-card__tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="Wannabees KTV Website">
+            <div class="project-card__img project-card__img--merge">
+              <div class="merged-shot-grid" aria-label="Wannabees KTV image collage">
+                <img src="/assets/images/ss_web-2-1.png" alt="Wannabees KTV main page" width="820" height="680" loading="lazy" />
+                <img src="/assets/images/ss_web-2-2.png" alt="Wannabees KTV sales view" width="420" height="330" loading="lazy" />
+                <img src="/assets/images/ss_web-2-3.png" alt="Wannabees KTV inventory view" width="420" height="330" loading="lazy" />
+              </div>
+              <div class="project-card__overlay">
+                <a href="public/index.html" class="btn btn--sm btn--primary" target="_blank" rel="noopener">Live Demo (In Development)</a>
+                <a href="public/index.html" class="btn btn--sm btn--ghost" target="_blank" rel="noopener">GitHub (Not Available)</a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__number" aria-hidden="true">02</span>
+              <h3 class="project-card__title">Wannabees KTV — Sales, Inventory &amp; Customer Management</h3>
+              <p class="project-card__desc">
+                A live web project for Wannabees KTV, published online for public access and showcasing the core pages and user flow. Access is restricted to verified owner and staff accounts.
+              </p>
+              <div class="project-card__tech">
+                <span>PHP</span><span>PHP API</span><span>SQL</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════ TESTIMONIALS ══════════════╗ -->
+    <section id="testimonials" class="section testimonials fade-in" aria-label="Testimonials">
+      <div class="container">
+        <h2 class="section__title text-center">What People <span class="accent">Say</span></h2>
+        <p class="section__sub text-center">Feedback from classmates, mentors, and collaborators.</p>
+
+        <div class="carousel__controls" aria-label="Carousel controls">
+          <button class="carousel__btn carousel__btn--prev" id="prevSlide" aria-label="Previous testimonial">&#8592;</button>
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Testimonial slides"></div>
+          <button class="carousel__btn carousel__btn--next" id="nextSlide" aria-label="Next testimonial">&#8594;</button>
+        </div>
+
+        <br>
+
+        <div class="carousel" role="region" aria-label="Testimonials carousel" aria-roledescription="carousel">
+          <div class="carousel__track" id="carouselTrack">
+
+            <div class="carousel__slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 1">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-card__text">
+                  "I am writing this testimony to express my appreciation for the excellent service I received. As one of his clients, I was highly impressed with his organized system and professional approach throughout the entire process.
+He demonstrated remarkable flexibility, especially when it came to design preferences. He was open to suggestions, attentive to details, and willing to make necessary adjustments to ensure that the final output aligned with my vision.
+What stood out the most was his commitment to delivering quality work. Not only did he accomplish what I initially requested, but he also exceeded my expectations through creativity, precision, and dedication. I highly recommend his services to anyone seeking professionalism, adaptability, and outstanding results."
+                </p>
+                <footer class="testimonial-card__author">
+                  <img src="/assets/images/portrait-of-roseann.jpg"
+                       alt="Portrait of Rose Ann Camposo" width="56" height="56" loading="lazy" />
+                  <div>
+                    <cite class="testimonial-card__name">Rose Ann Camposo</cite>
+                    <span class="testimonial-card__role">Girlfriend, Client</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ╔══════════════ CONTACT ══════════════╗ -->
     <section id="contact" class="section contact fade-in" aria-label="Contact form">
       <div class="container contact__grid">
+
         <div class="contact__info">
           <h2 class="section__title text-center">Let's <span class="accent">Talk</span></h2>
-          <p>Whether you have a project in mind, want to collaborate, or just want to chat about back-end architecture — my inbox is always open.</p>
+          <p>
+            Whether you have a project in mind, want to collaborate, or just want to chat about
+            back-end architecture — my inbox is always open.
+          </p>
           <ul class="contact__links" role="list">
-            <li><a href="mailto:jaga.labajan.coc@phinmaed.com">jaga.labajan.coc@phinmaed.com</a></li>
-            <li><a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jazdylabajan</a></li>
-            <li><a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer">github.com/jagalabajancoc-sketch</a></li>
+            <li>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <a href="mailto:jaga.labajan.coc@phinmaed.com">jaga.labajan.coc@phinmaed.com</a>
+            </li>
+            <li>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jazdylabajan</a>
+            </li>
+            <li>
+              <span aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </span>
+              <a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer">github.com/jagalabajancoc-sketch</a>
+            </li>
           </ul>
+          <div class="contact__availability">
+            <span class="availability-dot" aria-hidden="true"></span>
+            <span>Available for freelance &amp; collaborations</span>
+          </div>
         </div>
+
+        <div class="contact__form-wrap">
+          <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="contactName" name="name" placeholder="Your full name"
+                       autocomplete="name" required aria-required="true" aria-describedby="nameError" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="contactEmail" name="email" placeholder="you@example.com"
+                       autocomplete="email" required aria-required="true" aria-describedby="emailError" />
+                <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject <span aria-hidden="true">*</span></label>
+              <input type="text" id="contactSubject" name="subject" placeholder="What's this about?"
+                     required aria-required="true" aria-describedby="subjectError" />
+              <span class="form-error" id="subjectError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message <span aria-hidden="true">*</span></label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me what's on your mind…"
+                        required aria-required="true" aria-describedby="messageError"></textarea>
+              <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group form-group--rating">
+              <label id="ratingLabel">Rate this experience (optional)</label>
+              <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
+                <input type="radio" name="rating" id="r5" value="5" /><label for="r5" aria-label="5 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r4" value="4" /><label for="r4" aria-label="4 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r3" value="3" /><label for="r3" aria-label="3 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r2" value="2" /><label for="r2" aria-label="2 stars">&#9733;</label>
+                <input type="radio" name="rating" id="r1" value="1" /><label for="r1" aria-label="1 star">&#9733;</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+
       </div>
     </section>
+
   </main>
+
+  <!-- ╔══════════════ FOOTER ══════════════╗ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__brand">
+        <span class="logo-bracket">{</span>JGL<span class="logo-bracket">}</span>
+        &nbsp;Jazdy Gales Labajan
+      </p>
+      <nav class="footer__nav" aria-label="Footer social links">
+        <a href="mailto:jaga.labajan.coc@phinmaed.com" aria-label="Email Jazdy">Email</a>
+        <a href="https://www.linkedin.com/in/jazdy-gales-labajan-078a6735b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+        <a href="https://github.com/jagalabajancoc-sketch" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+      </nav>
+      <p class="footer__copy">
+        &copy; <span id="footerYear"></span> Jazdy Gales Labajan &middot;
+        <span class="footer__status">
+          <span class="availability-dot"></span> Open to opportunities
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ╔══════════════ AI CHAT WIDGET ══════════════╗ -->
+  <div class="chat-widget" id="chatWidget" aria-label="AI Chat with JGL-Bot">
+
+    <button class="chat-bubble" id="chatBubble" aria-label="Open chat with JGL-Bot" aria-expanded="false" aria-controls="chatPanel">
+      <span class="chat-bubble__icon chat-bubble__icon--open" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </span>
+      <span class="chat-bubble__icon chat-bubble__icon--close" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </span>
+      <span class="chat-bubble__badge" id="chatBadge" aria-label="New message" aria-hidden="true"></span>
+    </button>
+
+    <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Chat with JGL-Bot" aria-hidden="true">
+
+      <div class="chat-panel__header">
+        <div class="chat-panel__avatar" aria-hidden="true">
+          <span class="logo-bracket">{</span>AI<span class="logo-bracket">}</span>
+        </div>
+        <div class="chat-panel__meta">
+          <strong class="chat-panel__name">JGL-Bot</strong>
+          <span class="chat-panel__status">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Ask me about Jazdy
+          </span>
+        </div>
+        <button class="chat-panel__clear" id="chatClear" aria-label="Clear conversation" title="Clear conversation">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-panel__messages" id="chatMessages" role="log" aria-live="polite" aria-label="Chat messages"></div>
+
+      <div class="chat-typing" id="chatTyping" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="chat-suggestions" id="chatSuggestions" aria-label="Suggested questions">
+        <button class="chat-suggestion">What are Jazdy's top skills?</button>
+        <button class="chat-suggestion">Tell me about his projects</button>
+        <button class="chat-suggestion">Is he available to hire?</button>
+        <button class="chat-suggestion">How old is Jazdy?</button>
+        <button class="chat-suggestion">What's his relationship status?</button>
+        <button class="chat-suggestion">Does he have hobbies?</button>
+        <button class="chat-suggestion">What does he do recently?</button>
+        <button class="chat-suggestion">How can I contact him?</button>
+      </div>
+
+      <div class="chat-panel__input-area">
+        <textarea
+          class="chat-input"
+          id="chatInput"
+          placeholder="Ask me about Jazdy…"
+          rows="1"
+          aria-label="Chat message input"
+          maxlength="500"
+        ></textarea>
+        <button class="chat-send" id="chatSend" aria-label="Send message" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
