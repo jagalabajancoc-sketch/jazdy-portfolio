@@ -18,12 +18,24 @@ const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema(
   {
-    name: {
+    firstname: {
       type:      String,
       required:  [true, 'Name is required.'],
       trim:      true,
       minlength: [2, 'Name must be at least 2 characters.'],
       maxlength: [120, 'Name may not exceed 120 characters.'],
+    },
+    middlename: {
+      type:      String,
+      minlength: [2, 'Middle name must be at least 2 characters.'],
+      maxlength: [120, 'Middle name may not exceed 120 characters.'],
+    },
+    lastname: {
+      type:      String,
+      required:  [true, 'Name is required.'],
+      trim:      true,
+      minlength: [2, 'Last name must be at least 2 characters.'],
+      maxlength: [120, 'Last name may not exceed 120 characters.'],
     },
 
     email: {
