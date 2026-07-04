@@ -27,6 +27,8 @@ const contactSchema = new mongoose.Schema(
     },
     middlename: {
       type:      String,
+      required:  [false, 'First name is required.'],
+      trim:      false,
       minlength: [2, 'Middle name must be at least 2 characters.'],
       maxlength: [120, 'Middle name may not exceed 120 characters.'],
     },
