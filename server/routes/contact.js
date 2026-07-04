@@ -21,10 +21,12 @@ const contactLimiter  = require('../middleware/rateLimiter');
 
 /* ─── Shared server-side validation helper ─── */
 function validateContactPayload(body) {
-  const { name, email, subject, message, rating } = body;
+  const { firstname, middlename, lastname, email, subject, message, rating } = body;
   const errors = [];
 
-  if (!name    || String(name).trim().length    < 2)   errors.push('Name must be at least 2 characters.');
+  if (!firstname    || String(firstname).trim().length    < 2)   errors.push('First name must be at least 2 characters.');
+  if (!middlename    || String(middlename).trim().length    < 2)   errors.push('Middle name must be at least 2 characters.');
+  if (!lastname    || String(lastname).trim().length    < 2)   errors.push('Last name must be at least 2 characters.');
   if (!email   || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).trim())) errors.push('A valid email address is required.');
   if (!subject || String(subject).trim().length < 3)   errors.push('Subject must be at least 3 characters.');
   if (!message || String(message).trim().length < 10)  errors.push('Message must be at least 10 characters.');
@@ -59,12 +61,14 @@ router.post('/', contactLimiter, async (req, res) => {
     }
 
     /* 2 — Sanitise & parse */
-    const { name, email, subject, message, rating } = req.body;
+    const { firstname, middlename, lastname, email, subject, message, rating } = req.body;
     const parsedRating = rating ? parseInt(rating, 10) : null;
 
     /* 3 — Persist to MongoDB */
     const doc = await Contact.create({
-      name:    String(name).trim(),
+      firstname:    String(firstname).trim(),
+      middlename:    String(middlename).trim(),
+      lastname:    String(lastname).trim(),
       email:   String(email).trim().toLowerCase(),
       subject: String(subject).trim(),
       message: String(message).trim(),
@@ -81,7 +85,15 @@ router.post('/', contactLimiter, async (req, res) => {
 
   } catch (err) {
     /* Mongoose validation error (schema-level) */
-    if (err.name === 'ValidationError') {
+    if (err.firstname === 'ValidationError') {
+      const msg = Object.values(err.errors)[0]?.message || 'Validation failed.';
+      return res.status(422).json({ success: false, message: msg });
+    }
+    if (err.middlename === 'ValidationError') {
+      const msg = Object.values(err.errors)[0]?.message || 'Validation failed.';
+      return res.status(422).json({ success: false, message: msg });
+    }
+    if (err.lastname === 'ValidationError') {
       const msg = Object.values(err.errors)[0]?.message || 'Validation failed.';
       return res.status(422).json({ success: false, message: msg });
     }
